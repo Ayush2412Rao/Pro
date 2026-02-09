@@ -62,6 +62,30 @@ def main():
             subprocess.run([git_cmd, "remote", "remove", "origin"], stderr=subprocess.DEVNULL)
             subprocess.check_call([git_cmd, "remote", "add", "origin", repo_url])
             subprocess.check_call([git_cmd, "branch", "-M", "main"])
+
+            # Pull remote changes (like a README) before pushing to avoid "fetch first" errors.
+            print("\nAttempting to integrate remote changes (e.g., a README file)...")
+            # We run this command allowing stdout to be displayed for interactivity (e.g., auth prompts),
+            # but we capture stderr to check for specific, non-fatal errors.
+            pull_process = subprocess.run(
+                [git_cmd, "pull", "origin", "main", "--allow-unrelated-histories", "--no-edit"],
+                stderr=subprocess.PIPE,
+                text=True
+            )
+
+            # If pull failed, we inspect stderr to see if it's a recoverable situation.
+            if pull_process.returncode != 0:
+                # This error is expected if the remote repository is brand new and empty. We can ignore it.
+                if "couldn't find remote ref" in pull_process.stderr:
+                    print("Remote repository is empty, proceeding with initial push.")
+                else:
+                    # Any other error is unexpected and likely requires manual intervention.
+                    print(f"\nError: Could not automatically pull from remote. Git says:\n---")
+                    print(pull_process.stderr.strip())
+                    print(f"---\nPlease resolve the issue manually and then push using: git push -u origin main")
+                    return
+
+            print("\nPushing to remote...")
             subprocess.check_call([git_cmd, "push", "-u", "origin", "main"])
             print("Successfully pushed to GitHub!")
             
