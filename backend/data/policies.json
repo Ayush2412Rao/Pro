@@ -1,0 +1,98 @@
+[
+  {
+    "policy_id": "POL-001",
+    "scenario": "missing item",
+    "keywords": ["missing item", "missing product", "not delivered", "missing fries", "item not received", "didn't get"],
+    "default_resolution": "redelivery",
+    "response_template": "Sorry for the missing item. I can arrange a redelivery of the missing item or a partial refund. Which do you prefer?",
+    "next_steps": ["Confirm missing item", "Schedule redelivery or refund"]
+  },
+  {
+    "policy_id": "POL-002",
+    "scenario": "wrong food",
+    "keywords": ["wrong food", "wrong order", "incorrect item", "different item", "not what I ordered", "mistake"],
+    "default_resolution": "redelivery",
+    "response_template": "Sorry you received the wrong food. I can arrange redelivery of the correct items or a full refund. Please confirm your preference.",
+    "next_steps": ["Verify order items", "Offer redelivery or refund"]
+  },
+  {
+    "policy_id": "POL-003",
+    "scenario": "food smells bad",
+    "keywords": ["smelling", "smells bad", "spoiled", "rotten", "foul odor", "stinky", "off smell"],
+    "default_resolution": "refund",
+    "response_template": "Sorry the food smelled bad. I can issue a full refund and report this to the restaurant.",
+    "next_steps": ["Issue refund", "Report to restaurant"]
+  },
+  {
+    "policy_id": "POL-004",
+    "scenario": "broken seal",
+    "keywords": ["seal broken", "seal missing", "open package", "tampered", "package opened", "seal damaged"],
+    "default_resolution": "refund",
+    "response_template": "Sorry the seal was broken. I can arrange a replacement delivery or issue a full refund. Please confirm your preference.",
+    "next_steps": ["Confirm safety concern", "Offer replacement or refund"]
+  },
+  {
+    "policy_id": "POL-005",
+    "scenario": "late delivery",
+    "keywords": ["late", "delayed", "took too long", "overdue", "not on time", "delayed delivery"],
+    "default_resolution": "partial_refund",
+    "response_template": "Sorry the delivery was late. I can offer a partial refund or credits based on the delay.",
+    "next_steps": ["Check promised time", "Offer credits or partial refund"]
+  },
+  {
+    "policy_id": "POL-006",
+    "scenario": "order cancelled by restaurant",
+    "keywords": ["cancelled", "restaurant cancelled", "order cancelled", "cancellation"],
+    "default_resolution": "full_refund",
+    "response_template": "I'm sorry the restaurant cancelled your order. I'll issue a full refund immediately, and you'll receive compensation credits for the inconvenience.",
+    "next_steps": ["Process full refund", "Add compensation credits"]
+  },
+  {
+    "policy_id": "POL-007",
+    "scenario": "quality issues",
+    "keywords": ["stale", "undercooked", "overcooked", "burnt", "raw", "not fresh", "bad quality", "poor quality"],
+    "default_resolution": "full_refund",
+    "response_template": "I'm sorry about the quality issue. I'll issue a full refund immediately. Please do not consume the food if it's unsafe.",
+    "next_steps": ["Issue full refund", "Report to restaurant", "Advise customer"]
+  },
+  {
+    "policy_id": "POL-008",
+    "scenario": "cold food",
+    "keywords": ["cold", "not hot", "lukewarm", "room temperature", "should be hot"],
+    "default_resolution": "redelivery",
+    "response_template": "Sorry the food arrived cold. I can arrange a fresh redelivery or issue a partial refund. What would you prefer?",
+    "next_steps": ["Offer redelivery or refund", "Confirm preference"]
+  },
+  {
+    "policy_id": "POL-009",
+    "scenario": "wrong quantity",
+    "keywords": ["wrong quantity", "less quantity", "smaller portion", "not enough", "insufficient"],
+    "default_resolution": "redelivery",
+    "response_template": "Sorry about the quantity issue. I can arrange redelivery of the correct portion or provide a partial refund for the difference.",
+    "next_steps": ["Verify quantity", "Offer redelivery or refund"]
+  },
+  {
+    "policy_id": "POL-010",
+    "scenario": "damaged packaging",
+    "keywords": ["damaged", "broken container", "leaked", "spilled", "package damaged"],
+    "default_resolution": "redelivery",
+    "response_template": "Sorry about the damaged packaging. I can arrange a replacement delivery or issue a full refund if the food is affected.",
+    "next_steps": ["Assess food condition", "Offer replacement or refund"]
+  },
+  {
+    "policy_id": "POL-011",
+    "scenario": "allergy concerns",
+    "keywords": ["allergy", "allergic", "contains nuts", "dairy", "gluten", "allergen"],
+    "default_resolution": "full_refund",
+    "response_template": "I take allergy concerns very seriously. I'll issue a full refund immediately. Please do not consume the food if you have concerns.",
+    "next_steps": ["Issue full refund", "Report to restaurant", "Escalate if needed"]
+  },
+  {
+    "policy_id": "POL-012",
+    "scenario": "payment issues",
+    "keywords": ["payment", "charged twice", "wrong amount", "billing error", "refund payment"],
+    "default_resolution": "refund",
+    "response_template": "I'll investigate the payment issue immediately. If there's an error, I'll process a refund to your original payment method.",
+    "next_steps": ["Review payment", "Process refund if needed"]
+  }
+]

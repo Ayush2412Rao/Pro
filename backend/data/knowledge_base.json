@@ -1,0 +1,92 @@
+[
+  {
+    "policy_id": "POL-001",
+    "title": "Missing item",
+    "content": "If a customer reports a missing item in a delivered order, verify the order summary and offer redelivery of the missing item. If redelivery is not possible, issue a partial refund for the missing item. Escalate if the order status is unclear or missing evidence. Always confirm which specific item is missing before processing the resolution."
+  },
+  {
+    "policy_id": "POL-002",
+    "title": "Wrong food delivered",
+    "content": "If the customer received the wrong food, apologize and offer redelivery of the correct items. If the customer declines, issue a full refund. Escalate if the order has multiple prior complaints. Verify what was ordered versus what was received to ensure accurate resolution."
+  },
+  {
+    "policy_id": "POL-003",
+    "title": "Food smells bad",
+    "content": "If the food smells bad or appears spoiled, issue a full refund and offer guidance on safe disposal. Escalate if the restaurant has repeated reports. Advise the customer not to consume the food and report the issue to food safety authorities if necessary."
+  },
+  {
+    "policy_id": "POL-004",
+    "title": "Broken or missing seal",
+    "content": "If the packaging seal is broken or missing, offer a redelivery if the customer wants the order replaced. Otherwise issue a full refund. Escalate if the issue includes safety concerns. Broken seals indicate potential tampering and should be treated seriously for food safety."
+  },
+  {
+    "policy_id": "POL-005",
+    "title": "Late delivery",
+    "content": "If the delivery is late beyond the service promise, provide a partial refund or credits based on delay duration. Escalate if the order is marked delivered but customer denies receipt. For delays over 30 minutes, consider a more substantial compensation. Check the promised delivery time versus actual delivery time."
+  },
+  {
+    "policy_id": "POL-006",
+    "title": "Order cancelled by restaurant",
+    "content": "If the restaurant cancels the order after it has been accepted, issue a full refund to the customer and provide compensation credits if the cancellation happens close to the promised delivery time. Escalate if the restaurant has repeated cancellations. Cancellations within 15 minutes of delivery time warrant additional compensation."
+  },
+  {
+    "policy_id": "POL-007",
+    "title": "Quality issues (stale or undercooked food)",
+    "content": "If the customer reports that food is stale, undercooked, or otherwise unsafe to eat, issue a full refund and advise the customer not to consume the food. Escalate immediately if there are any signs of food poisoning or health risks. Quality issues affecting food safety require immediate attention and may need to be reported to health authorities."
+  },
+  {
+    "policy_id": "POL-008",
+    "title": "Cold food",
+    "content": "If food arrives cold when it should be hot, offer redelivery of fresh hot food or a partial refund. Cold food affects the dining experience significantly. Verify the delivery time and temperature expectations. If the customer prefers not to wait for redelivery, provide a partial refund based on the order value."
+  },
+  {
+    "policy_id": "POL-009",
+    "title": "Wrong quantity or portion size",
+    "content": "If the customer receives incorrect quantity or smaller portions than ordered, verify the order details and offer redelivery of the correct quantity or a partial refund for the difference. Portion size discrepancies should be addressed promptly to ensure customer satisfaction."
+  },
+  {
+    "policy_id": "POL-010",
+    "title": "Damaged packaging",
+    "content": "If packaging is damaged, leaking, or spilled, assess whether the food inside is affected. If food is compromised, issue a full refund and arrange replacement. If only packaging is damaged but food is intact, offer a partial refund or replacement packaging. Document the damage for quality improvement."
+  },
+  {
+    "policy_id": "POL-011",
+    "title": "Allergy concerns",
+    "content": "If a customer reports allergy concerns or receives food containing allergens not mentioned in the order, issue a full refund immediately. Do not advise consumption. Escalate to management and report to the restaurant. This is a critical safety issue that requires immediate attention and may need medical consultation if symptoms are present."
+  },
+  {
+    "policy_id": "POL-012",
+    "title": "Payment or billing errors",
+    "content": "If there are payment issues such as double charges, wrong amounts, or billing errors, investigate the transaction immediately. Verify the order total versus charged amount. If an error is confirmed, process a refund to the original payment method within 3-5 business days. Document the issue for accounting review."
+  },
+  {
+    "policy_id": "POL-013",
+    "title": "Overcooked or burnt food",
+    "content": "If food is overcooked, burnt, or charred beyond acceptable standards, offer redelivery of properly cooked food or a full refund. Overcooking affects taste and quality significantly. Verify the customer's preference for resolution and ensure the restaurant is informed for quality control."
+  },
+  {
+    "policy_id": "POL-014",
+    "title": "Missing condiments or extras",
+    "content": "If condiments, sauces, cutlery, or extras are missing, offer to deliver them separately or provide a small credit. Missing condiments are minor issues but affect customer experience. For high-value orders, consider a small refund or credit as goodwill."
+  },
+  {
+    "policy_id": "POL-015",
+    "title": "Wrong address or delivery location",
+    "content": "If food is delivered to the wrong address due to customer error, no refund is typically provided. If it's a platform error, arrange redelivery to the correct address or issue a full refund. Verify the address in the order details versus delivery address to determine responsibility."
+  },
+  {
+    "policy_id": "POL-016",
+    "title": "Food temperature inconsistency",
+    "content": "If some items are hot while others are cold, or food temperature is inconsistent, offer redelivery of the affected items or a partial refund. Temperature consistency is important for food quality. Assess which items are affected and provide appropriate compensation."
+  },
+  {
+    "policy_id": "POL-017",
+    "title": "Vegetarian/non-vegetarian mix-up",
+    "content": "If vegetarian food contains meat or non-vegetarian items, or vice versa, issue a full refund immediately. This is a serious issue affecting dietary preferences and religious restrictions. Escalate immediately and ensure the restaurant is informed to prevent future occurrences."
+  },
+  {
+    "policy_id": "POL-018",
+    "title": "Spice level incorrect",
+    "content": "If food spice level doesn't match the order (too spicy or not spicy enough), offer redelivery with correct spice level or a partial refund. Spice preferences are important for customer satisfaction. Verify the order notes and restaurant preparation."
+  }
+]
