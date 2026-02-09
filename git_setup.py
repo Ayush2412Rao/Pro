@@ -37,12 +37,34 @@ def main():
         return
 
     try:
-        subprocess.check_call([git_cmd, "init"])
+        if not os.path.exists(".git"):
+            subprocess.check_call([git_cmd, "init"])
+            
         subprocess.check_call([git_cmd, "config", "user.name", "Ayush2412Rao"])
         subprocess.check_call([git_cmd, "config", "user.email", "ayushrao786420@gmail.com"])
         subprocess.check_call([git_cmd, "add", "."])
-        subprocess.check_call([git_cmd, "commit", "-m", "Initial commit"])
-        print("Git repository initialized, configured, and committed.")
+        
+        # Check if there are changes to commit
+        status = subprocess.run([git_cmd, "status", "--porcelain"], capture_output=True, text=True)
+        if status.stdout.strip():
+            subprocess.check_call([git_cmd, "commit", "-m", "Initial commit"])
+            print("Git repository initialized, configured, and committed.")
+        else:
+            print("Nothing to commit (repository already up to date locally).")
+
+        print("\n--- Push to GitHub ---")
+        print("To see this code on GitHub, you must create a repository there first.")
+        print("1. Go to https://github.com/new")
+        print("2. Create a repository (e.g., named 'Pro')")
+        repo_url = input("3. Enter the HTTPS URL here (e.g., https://github.com/Ayush2412Rao/Pro.git): ").strip()
+        
+        if repo_url:
+            subprocess.run([git_cmd, "remote", "remove", "origin"], stderr=subprocess.DEVNULL)
+            subprocess.check_call([git_cmd, "remote", "add", "origin", repo_url])
+            subprocess.check_call([git_cmd, "branch", "-M", "main"])
+            subprocess.check_call([git_cmd, "push", "-u", "origin", "main"])
+            print("Successfully pushed to GitHub!")
+            
     except subprocess.CalledProcessError as e:
         print(f"Error during git setup: {e}")
 
